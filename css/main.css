@@ -1,0 +1,134 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(../images/fundo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+*,
+* :before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+h2 {
+  padding-left: 15px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #1DA1F2;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 30px;
+  line-height: 70px;
+  font-weight: 700;
+}
+
+.fa-fw {
+  padding-top: 22px;
+}
+
+.message-set {
+  padding-top: 50px;
+  margin: 0 80px;
+}
+
+.message-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border: 2px;
+  border-radius: 5px;
+  background-color: #E8F5FD;
+  padding: 20px 5px;
+  flex-direction: column;
+}
+
+.set-tweet {
+  display: flex;
+  padding: 0 20%;
+}
+
+.set-btn {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.message-box {
+  border-radius: 10px;
+  margin-left: 10px;
+  resize: none;
+  height: 150px;
+  font-family: "Lato";
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.user {
+  border-radius: 5px;
+  background-color: #F5F8FA;
+  height: 110px;
+  width: 20%;
+  font-family: "Lato";
+  font-size: 20px;
+}
+
+.user p {
+  font-size: 15px;
+  color: #98A3AE;
+}
+
+.user-set {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.user-icon {
+  font-size: 45px;
+  color: #3991F5;
+}
+
+.btn {
+  background-color: #3991F5;
+  margin-top: 10px;
+  color: white;
+  border: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  font-size: 14px;
+  width: 70px;
+  height: 27px;
+  align-self: flex-end;
+}
+
+.tweets {
+  border-top: 3px solid #d8d1d1;
+  margin-top: 20px;
+  padding: 20px 20% 0 20%;
+  font-family: "Lato";
+  font-size: 20px;
+}
+
+.posts {
+  background-color: #F5F8FA;
+  border-radius: 5px;
+}
+
+.posts p {
+  padding: 10px;
+  margin: 10px;
+  font-family: "Lato";
+  font-size: 20px
+}
