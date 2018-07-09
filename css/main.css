@@ -149,3 +149,12 @@ h2 {
   font-size: 20px;
   word-wrap: break-word;
 }
+
+.posts .hours{
+  font-size: 14px;
+  color: gray;
+}
+
+.contNumber{
+  color: #3991F5;
+}
