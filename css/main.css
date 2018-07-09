@@ -69,12 +69,12 @@ h2 {
 }
 
 .message-box {
+  overflow: hidden;
   border-radius: 10px;
   margin-left: 10px;
   resize: none;
-  height: 150px;
   font-size: 15px;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 
 .user {
@@ -146,5 +146,6 @@ h2 {
 .posts p {
   padding: 10px;
   margin: 10px;
-  font-size: 20px
+  font-size: 20px;
+  word-wrap: break-word;
 }

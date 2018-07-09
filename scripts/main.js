@@ -16,36 +16,38 @@ function addTweet() {
   newTweets.prepend(novaDiv);
   novaDiv.appendChild(novoPar);
   newText.value = "";
+  contNumber.textContent = char;
 }
 button.addEventListener("click", addTweet);
 
-
-function charScore(){
+function charScore() {
   numChar = newText.value.length;
-  if(numChar){
+  if (numChar) {
     contNumber.textContent = char - numChar;
   } else {
     contNumber.textContent = char;
   }
 
-  if(numChar >= 120 && numChar < 130){
+  if (numChar >= 120 && numChar < 130) {
     contNumber.style.color = "orange";
-  } else if(numChar >= 130 && numChar < 140){
+  } else if (numChar >= 130 && numChar < 140) {
     contNumber.style.color = "orangered";
-  } else if(numChar > 140){
+  } else if (numChar > 140) {
     contNumber.style.color = "#b4b1b1";
-  } else if(numChar < 120){
+  } else if (numChar < 120) {
     contNumber.style.color = "#3991F5";
   }
 
-  if (newText.value !== "" && numChar <= 140){
+  if (newText.value !== "" && numChar <= 140) {
     button.removeAttribute("disabled", "false");
-  } else if (newText.value === "" || numChar > 140){
+  } else if (newText.value === "" || numChar > 140) {
     button.setAttribute("disabled", "true");
   }
-}
-newText.addEventListener("keypress",charScore);
-newText.addEventListener("keyup",charScore);
-newText.addEventListener("keydown",charScore);
 
+  newText.style.height = "40px";
+  newText.style.height = newText.scrollHeight + "px";
+}
+newText.addEventListener("keypress", charScore);
+newText.addEventListener("keyup", charScore);
+newText.addEventListener("keydown", charScore);
 
