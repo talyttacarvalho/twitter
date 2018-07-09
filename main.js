@@ -1,9 +1,11 @@
 var newText = document.querySelector(".message-box");
 var newTweets = document.querySelector(".tweets");
 var button = document.querySelector(".btn");
+var contNumber = document.querySelector(".contNumber");
 var span = document.querySelector("span");
-
 var char = 140;
+var counter = 0;
+var numChar;
 
 
 function addTweet() {
@@ -14,29 +16,28 @@ function addTweet() {
   newTweets.prepend(novaDiv);
   novaDiv.appendChild(novoPar);
   newText.value = "";
-  disableBtn();
 }
-
-function verifyContent() {
-  if(newText.value){
-    button.removeAttribute("disabled");
-  }
-  char--;
-  span.textContent = char;
-}
-
 button.addEventListener("click", addTweet);
-newText.addEventListener("keypress", verifyContent);
 
-function disableBtn() {
-  if (!newText.value) {
-    button.setAttribute("disabled",true);
-  } 
+
+function charScore(){
+  numChar = document.querySelector(".message-box").value.length;
+  if(numChar){
+    contNumber.textContent = char - numChar;
+  } else if (newText.value === ""){
+    contNumber.textContent = char;
+  }
 }
+newText.addEventListener("keydown",charScore);
+newText.addEventListener("keyup",charScore);  
+newText.addEventListener("keypress",charScore);
 
-function loadpage(){
-  disableBtn();
-  span.textContent = char;
+function disableBtn(){
+  var numChar = document.querySelector(".message-box").value.length;
+    if (newText.value !== "" && numChar <= 140){
+      button.removeAttribute("disabled", "false");
+    } else if (newText.value === "" || numChar > 140){
+      button.setAttribute("disabled", "true");
+    }
 }
-
-window.onload = loadpage;
+setInterval(disableBtn, 1);

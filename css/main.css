@@ -109,6 +109,10 @@ h2 {
   font-weight: 800;
 }
 
+.set-btn p {
+  align-self: flex-end;
+}
+
 .btn {
   background-color: #3991F5;
   margin-top: 10px;
@@ -120,6 +124,10 @@ h2 {
   width: 70px;
   height: 27px;
   align-self: flex-end;
+}
+
+.btn:disabled{
+  background-color: #b4b1b1;
 }
 
 .tweets {
