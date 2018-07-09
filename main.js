@@ -21,23 +21,31 @@ button.addEventListener("click", addTweet);
 
 
 function charScore(){
-  numChar = document.querySelector(".message-box").value.length;
+  numChar = newText.value.length;
   if(numChar){
     contNumber.textContent = char - numChar;
-  } else if (newText.value === ""){
+  } else {
     contNumber.textContent = char;
   }
-}
-newText.addEventListener("keydown",charScore);
-newText.addEventListener("keyup",charScore);  
-newText.addEventListener("keypress",charScore);
 
-function disableBtn(){
-  var numChar = document.querySelector(".message-box").value.length;
-    if (newText.value !== "" && numChar <= 140){
-      button.removeAttribute("disabled", "false");
-    } else if (newText.value === "" || numChar > 140){
-      button.setAttribute("disabled", "true");
-    }
+  if(numChar >= 120 && numChar < 130){
+    contNumber.style.color = "orange";
+  } else if(numChar >= 130 && numChar < 140){
+    contNumber.style.color = "orangered";
+  } else if(numChar > 140){
+    contNumber.style.color = "#b4b1b1";
+  } else if(numChar < 120){
+    contNumber.style.color = "#3991F5";
+  }
+
+  if (newText.value !== "" && numChar <= 140){
+    button.removeAttribute("disabled", "false");
+  } else if (newText.value === "" || numChar > 140){
+    button.setAttribute("disabled", "true");
+  }
 }
-setInterval(disableBtn, 1);
+newText.addEventListener("keypress",charScore);
+newText.addEventListener("keyup",charScore);
+newText.addEventListener("keydown",charScore);
+
+
